@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andry Fy Ranto - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.0/cdn.min.js"
+      defer
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav
+      class="bg-white shadow-lg fixed w-full top-0 z-50"
+      x-data="{ open: false }"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <h1 class="text-2xl font-bold text-gray-800">Andry Fy</h1>
+            </div>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#articles"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >Articles</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              @click="open = !open"
+              class="text-gray-700 hover:text-blue-600 focus:outline-none"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div x-show="open" x-transition class="md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-gray-700 hover:text-blue-600"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-gray-700 hover:text-blue-600"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-2 text-gray-700 hover:text-blue-600"
+            >Skills</a
+          >
+          <a
+            href="#articles"
+            class="block px-3 py-2 text-gray-700 hover:text-blue-600"
+            >Articles</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-gray-700 hover:text-blue-600"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-10 left-10 w-20 h-20 bg-white opacity-10 rounded-full floating"
+        ></div>
+        <div
+          class="absolute top-1/2 right-20 w-16 h-16 bg-white opacity-10 rounded-full floating"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/3 w-12 h-12 bg-white opacity-10 rounded-full floating"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <div class="text-center z-10">
+        <div class="mb-6">
+          <div
+            class="w-32 h-32 bg-white rounded-full mx-auto mb-4 flex items-center justify-center"
+          >
+            <i class="fas fa-code text-5xl text-blue-600"></i>
+          </div>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">Andry Fy Ranto</h1>
+        <div class="text-xl md:text-2xl mb-8 h-8 overflow-hidden">
+          <p class="typing-animation whitespace-nowrap">
+            Full Stack JavaScript Developer
+          </p>
+        </div>
+        <p class="text-lg mb-8 max-w-2xl mx-auto">
+          Angular & Node.js Specialist with 4+ years of experience
+        </p>
+        <div class="flex justify-center space-x-4">
+          <a
+            href="#contact"
+            class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+            >Contact Me</a
+          >
+          <a
+            href="#articles"
+            class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >View Articles</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Passionate Developer Based in Madagascar
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Full Stack JavaScript Developer specialized in Angular and
+              Node.js, with over 4 years of experience in developing modern,
+              performant, and scalable web applications.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Based in Antananarivo, Madagascar, I specialize in creating robust
+              and innovative web applications. My expertise covers the entire
+              development cycle, from design to production deployment.
+            </p>
+            <div class="flex items-center text-gray-600 mb-4">
+              <i class="fas fa-map-marker-alt text-blue-600 mr-3"></i>
+              <span>Antananarivo, Madagascar</span>
+            </div>
+            <div class="flex items-center text-gray-600">
+              <i class="fas fa-phone text-blue-600 mr-3"></i>
+              <span>+26134000000</span>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-lg">
+            <h4 class="text-xl font-bold text-gray-900 mb-4">My Statistics</h4>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-blue-600 mb-2">4+</div>
+                <div class="text-gray-600">Years of Experience</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                <div class="text-gray-600">Projects Completed</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-blue-600 mb-2">100%</div>
+                <div class="text-gray-600">Client Satisfaction</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                <div class="text-gray-600">Support Available</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">My Skills</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+            <div class="text-center mb-6">
+              <div
+                class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fab fa-angular text-3xl text-red-600"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">Frontend</h3>
+            </div>
+            <ul class="space-y-2 text-gray-600">
+              <li>
+                <i class="fas fa-check text-green-500 mr-2"></i>Angular 15+
+              </li>
+              <li>
+                <i class="fas fa-check text-green-500 mr-2"></i>TypeScript
+              </li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>RxJS</li>
+              <li>
+                <i class="fas fa-check text-green-500 mr-2"></i>HTML5 & CSS3
+              </li>
+              <li>
+                <i class="fas fa-check text-green-500 mr-2"></i>Tailwind CSS
+              </li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>Bootstrap</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+            <div class="text-center mb-6">
+              <div
+                class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fab fa-node-js text-3xl text-green-600"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">Backend</h3>
+            </div>
+            <ul class="space-y-2 text-gray-600">
+              <li><i class="fas fa-check text-green-500 mr-2"></i>Node.js</li>
+              <li>
+                <i class="fas fa-check text-green-500 mr-2"></i>Express.js
+              </li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>NestJS</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>MongoDB</li>
+              <li>
+                <i class="fas fa-check text-green-500 mr-2"></i>PostgreSQL
+              </li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>REST APIs</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+            <div class="text-center mb-6">
+              <div
+                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-tools text-3xl text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">Tools</h3>
+            </div>
+            <ul class="space-y-2 text-gray-600">
+              <li>
+                <i class="fas fa-check text-green-500 mr-2"></i>Git & GitHub
+              </li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>Docker</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>AWS</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>Figma</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>Postman</li>
+              <li><i class="fas fa-check text-green-500 mr-2"></i>VS Code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Articles Section -->
+    <section id="articles" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">My Articles</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Discover my latest articles on web development, modern technologies,
+            and experience insights.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center"
+            >
+              <i class="fab fa-angular text-6xl text-white"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <i class="fas fa-calendar mr-2"></i>
+                <span>January 15, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Angular 18 New Features
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Discover the main features and improvements brought by Angular
+                18, including new signals and performance enhancements.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 hover:text-blue-800 font-semibold"
+                >Read More <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center"
+            >
+              <i class="fab fa-node-js text-6xl text-white"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <i class="fas fa-calendar mr-2"></i>
+                <span>January 10, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Microservices Architecture with Node.js
+              </h3>
+              <p class="text-gray-600 mb-4">
+                How to effectively structure your Node.js applications in
+                microservices for better scalability and maintainability.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 hover:text-blue-800 font-semibold"
+                >Read More <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center"
+            >
+              <i class="fas fa-database text-6xl text-white"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <i class="fas fa-calendar mr-2"></i>
+                <span>January 5, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                MongoDB Performance Optimization
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Advanced techniques for optimizing your MongoDB database
+                performance in production environments.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 hover:text-blue-800 font-semibold"
+                >Read More <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center"
+            >
+              <i class="fab fa-js-square text-6xl text-white"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <i class="fas fa-calendar mr-2"></i>
+                <span>December 28, 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                TypeScript Best Practices 2025
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Complete guide to TypeScript best practices for writing robust
+                and maintainable code.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 hover:text-blue-800 font-semibold"
+                >Read More <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center"
+            >
+              <i class="fas fa-rocket text-6xl text-white"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <i class="fas fa-calendar mr-2"></i>
+                <span>December 20, 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Deployment with Docker and AWS
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Complete tutorial for deploying your JavaScript applications on
+                AWS using Docker and cloud services.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 hover:text-blue-800 font-semibold"
+                >Read More <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-lg card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-teal-500 to-green-600 flex items-center justify-center"
+            >
+              <i class="fas fa-mobile-alt text-6xl text-white"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <i class="fas fa-calendar mr-2"></i>
+                <span>December 15, 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Progressive Web Apps with Angular
+              </h3>
+              <p class="text-gray-600 mb-4">
+                How to create performant PWAs with Angular and deliver a native
+                user experience on mobile devices.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 hover:text-blue-800 font-semibold"
+                >Read More <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">Contact Me</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
+          <p class="text-gray-300 max-w-2xl mx-auto">
+            Have a project in mind? Don't hesitate to contact me to discuss your
+            needs.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <i class="fas fa-envelope text-blue-400 mr-4 text-xl"></i>
+                <div>
+                  <p class="font-semibold">Email</p>
+                  <a
+                    href="mailto:andryfyranto@gmail.com"
+                    class="text-blue-400 hover:text-blue-300"
+                    >andryfyranto@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone text-blue-400 mr-4 text-xl"></i>
+                <div>
+                  <p class="font-semibold">Phone</p>
+                  <p class="text-gray-300">+26134000000</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-map-marker-alt text-blue-400 mr-4 text-xl"></i>
+                <div>
+                  <p class="font-semibold">Location</p>
+                  <p class="text-gray-300">Antananarivo, Madagascar</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h4 class="text-xl font-bold mb-4">Follow Me</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="https://www.linkedin.com/in/andryfy/"
+                  target="_blank"
+                  class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                >
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a
+                  href="https://github.com/andryfy"
+                  target="_blank"
+                  class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"
+                >
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+                <a
+                  href="https://instagram.com/andryfyranto"
+                  target="_blank"
+                  class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors"
+                >
+                  <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/andryfyranto/"
+                  target="_blank"
+                  class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 transition-colors"
+                >
+                  <i class="fab fa-facebook text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+            <form class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium mb-2">Full Name</label>
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-400 text-white"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Email</label>
+                <input
+                  type="email"
+                  class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-400 text-white"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Subject</label>
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-400 text-white"
+                  placeholder="Subject of your message"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Message</label>
+                <textarea
+                  rows="5"
+                  class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-400 text-white"
+                  placeholder="Your message"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <p>&copy; 2025 Andry Fy Ranto. All rights reserved.</p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="#home" class="text-gray-400 hover:text-white">Home</a>
+            <a href="#about" class="text-gray-400 hover:text-white">About</a>
+            <a href="#articles" class="text-gray-400 hover:text-white"
+              >Articles</a
+            >
+            <a href="#contact" class="text-gray-400 hover:text-white"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
